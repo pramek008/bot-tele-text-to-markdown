@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  telegram-bot:
+    build: .
+    container_name: markdown-pdf-bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    restart: unless-stopped
+
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75" # Maksimal 75% CPU
+          memory: 512M # Maksimal 512MB RAM
+        reservations:
+          cpus: "0.25" # Minimal 25% CPU
+          memory: 256M # Minimal 256MB RAM
+
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
