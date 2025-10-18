@@ -1,12 +1,7 @@
 python-telegram-bot==20.7
-# playwright==1.37.0
 markdown==3.7
 pygments==2.18.0
-# markdown==3.5.1
-# weasyprint==62.3
-# pydyf==0.10.0
-# cffi==1.16.0
-# pillow==10.3.0
-# cssselect2==0.7.0
-# tinycss2==1.3.0
+requests 
+pandas
+openpyxl
 python-telegram-bot[job-queue]

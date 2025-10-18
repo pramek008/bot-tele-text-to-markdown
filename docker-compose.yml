@@ -7,7 +7,8 @@ services:
     environment:
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
     restart: unless-stopped
-
+    networks:
+      - markdown-network
     # Resource limits
     deploy:
       resources:
@@ -24,3 +25,9 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+
+networks:
+  markdown-network:
+    external: true
+    name: markdown-network
+
