@@ -40,7 +40,7 @@ cp .env.example .env
 3. Edit file `.env` dan masukkan token bot Anda:
 
 ```
-TELEGRAM_BOT_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz
+TELEGRAM_BOT_TOKEN=esxample:12ed13fd3token
 ```
 
 4. Build dan jalankan dengan Docker Compose:
